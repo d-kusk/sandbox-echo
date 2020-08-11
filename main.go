@@ -1,8 +1,7 @@
 package main
 
 import (
-	"net/http"
-
+	"github.com/d-kusk/sandbox-echo/handler"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )
@@ -12,13 +11,10 @@ func main() {
 
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
+	e.Use(middleware.Gzip())
 
-	e.GET("/", hello)
+	e.GET("/", handler.Hello()).Name = "root"
+	e.GET("/hello", handler.Hello()).Name = "hellp"
 
 	e.Logger.Fatal(e.Start(":1323"))
-}
-
-// Handler
-func hello(c echo.Context) error {
-	return c.String(http.StatusOK, "Hello, World!")
 }
