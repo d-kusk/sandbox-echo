@@ -6,8 +6,12 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
+type Hello struct {
+	Hello string
+}
+
 func Hello() echo.HandlerFunc {
 	return func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello")
+		return c.JSON(http.StatusOK, map[string]interface{}{"hello": "world"})
 	}
 }
