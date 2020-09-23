@@ -1,10 +1,10 @@
-package route
+package router
 
 import (
 	"io"
 	"text/template"
 
-	"github.com/d-kusk/sandbox-echo/handlers"
+	"github.com/dsk52/sandbox-echo/handlers"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 )

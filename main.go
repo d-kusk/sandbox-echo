@@ -1,9 +1,9 @@
 package main
 
-import "github.com/d-kusk/sandbox-echo/route"
+import "github.com/dsk52/sandbox-echo/router"
 
 func main() {
-	e := route.Init()
+	e := router.Init()
 
 	e.Logger.Fatal(e.Start(":1323"))
 }
