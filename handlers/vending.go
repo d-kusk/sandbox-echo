@@ -2,9 +2,9 @@ package handlers
 
 import (
 	"net/http"
+	"sandbox-echo/db"
+	"sandbox-echo/models"
 
-	"github.com/dsk52/sandbox-echo/db"
-	"github.com/dsk52/sandbox-echo/models"
 	"github.com/labstack/echo"
 )
 

@@ -1,6 +1,6 @@
 package main
 
-import "github.com/dsk52/sandbox-echo/router"
+import "sandbox-echo/router"
 
 func main() {
 	e := router.Init()

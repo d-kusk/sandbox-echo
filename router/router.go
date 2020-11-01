@@ -2,9 +2,9 @@ package router
 
 import (
 	"io"
+	"sandbox-echo/handlers"
 	"text/template"
 
-	"github.com/dsk52/sandbox-echo/handlers"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 )
